@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/sm7125-common
+COMMON_PATH := device/samsung/mt6769-common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
@@ -43,12 +43,10 @@ PRODUCT_PACKAGES += \
     init.samsung.display.rc \
     init.samsung.rc \
     init.samsung.power.rc \
-    init.fingerprint.rc \
     init.ramplus.rc \
     init.target.rc \
     ueventd.qcom.rc \
     init.audio.samsung.rc \
-    init.nfc.samsung.rc \
     init.vendor.onebinary.rc \
     init.vendor.rilchip.rc \
     init.vendor.rilcommon.rc \
@@ -321,10 +319,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 
-# Radio
-PRODUCT_PACKAGES += \
-    android.hardware.broadcastradio@1.0-impl
-
 # Recovery
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
@@ -397,4 +391,4 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
 # Inherit proprietary blobs
-$(call inherit-product, vendor/samsung/sm7125-common/sm7125-common-vendor.mk)
+$(call inherit-product, vendor/samsung/mt6769-common/mt6769-common-vendor.mk)

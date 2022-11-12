@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE_COMMON=sm7125-common
+DEVICE_COMMON=mt6769-common
 VENDOR=samsung
 
 # Load extractutils and do some sanity checks
